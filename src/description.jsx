@@ -1,5 +1,5 @@
 import React from 'react'
-import product from '../products'
+import product from './products'
 
 const Description = () => {
   return (
