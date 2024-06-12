@@ -3,7 +3,7 @@ import product from './products'
 
 const Price = () => {
   return (
-    <div>Price</div>
+    <div>{product.price}</div>
   )
 }
 
