@@ -12,9 +12,10 @@ function App() {
   const firstName = "Usman";
 
   return (
-    <Card style={{ width: '20rem' , border: '2px solid white', borderRadius: '10px'}}>
+    <>
+    <Card style={{ width: '20rem' , border: '2px solid white', borderRadius: '10px' , margin:"auto"}}>
       <Card.Body>
-         <Image />  {/*Card Image  */}
+    
         <Card.Title>
           <Name/>   {/*Card Name  */}
         </Card.Title>
@@ -22,11 +23,20 @@ function App() {
           <Description/> {/*Card Description  */}
         </Card.Text>
        <h4 style={{fontFamily:"-moz-initial"}}><Price/> </h4> {/*Card Price  */}
+       <div style={{ marginTop: '20px', textAlign: 'center',  margin:"auto" }}>
+        {firstName ? (
+          < >
+            <p>Hello {firstName}</p>
+            <Image /> {/*Card Image  */}
+          </>
+        ) : (
+          <p>Hello there</p>
+        )}
+      </div> 
       </Card.Body>
-      <div style={{ marginTop: '20px', textAlign: 'center' }}>
-        {firstName ? <p>Hello {firstName}</p> : <p>Hello there</p>}
-      </div>
     </Card>
+  
+    </>
      
   )
 }
